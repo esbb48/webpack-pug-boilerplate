@@ -1,0 +1,39 @@
+{
+  "name": "webpack-nunjucks-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "add-build": "git add dist",
+    "build": "webpack -p",
+    "deploy": "git subtree push --prefix dist origin master",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --open --watch --mode=development",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/esbb48/webpack-nunjucks-boilerplate.git"
+  },
+  "author": "ALi <esbb48@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "html-minifier-webpack-plugin": "^2.0.1",
+    "nunjucks": "^3.2.0",
+    "nunjucks-webpack-plugin": "^5.0.0",
+    "pre-commit": "^1.2.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-watch-files-plugin": "^1.0.3"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/esbb48/webpack-nunjucks-boilerplate/issues"
+  },
+  "pre-commit": [
+    "build",
+    "add-build"
+  ],
+  "homepage": "https://gitlab.com/esbb48/webpack-nunjucks-boilerplate#readme"
+}
